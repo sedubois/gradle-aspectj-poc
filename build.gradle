@@ -1,28 +1,4 @@
-apply plugin: 'groovy'
-apply plugin: 'application'
-mainClassName = "com.hello.MyClass"
-version = '1.0'
-ext.aspectjVersion = '1.8.5'
-
-buildscript {
-    repositories {
-        maven {
-            url "https://maven.eveoh.nl/content/repositories/releases"
-        }
-    }
-
-    dependencies {
-        classpath "nl.eveoh:gradle-aspectj:1.5"
-    }
-}
-
-apply plugin: 'aspectj'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile 'org.aspectj:aspectjrt:1.8.5'
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+allprojects {
+  group = 'com.hello'
+  version = '1.0-SNAPSHOT'
 }

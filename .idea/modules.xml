@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/gradle-aspectj.iml" filepath="$PROJECT_DIR$/gradle-aspectj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/submodule/submodule.iml" filepath="$PROJECT_DIR$/submodule/submodule.iml" />
     </modules>
   </component>
 </project>
