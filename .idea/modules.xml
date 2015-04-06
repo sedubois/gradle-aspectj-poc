@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gradle-aspectj-spring-tx.iml" filepath="$PROJECT_DIR$/gradle-aspectj-spring-tx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradle-aspectj-poc.iml" filepath="$PROJECT_DIR$/gradle-aspectj-poc.iml" />
     </modules>
   </component>
 </project>

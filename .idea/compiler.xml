@@ -26,7 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="gradle-aspectj" target="" />
+      <module name="gradle-aspectj-poc" target="" />
     </bytecodeTargetLevel>
   </component>
 </project>
