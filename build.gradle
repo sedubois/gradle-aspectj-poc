@@ -1,31 +1,29 @@
-allprojects {
-  group = 'com.hello'
-  version = '1.0-SNAPSHOT'
-  apply plugin: 'groovy'
+group = 'com.hello'
+version = '1.0-SNAPSHOT'
+apply plugin: 'groovy'
+
+ext.aspectjVersion = '1.8.5'
+ext.springVersion = '4.1.6.RELEASE'
+
+buildscript {
+  repositories {
+    maven { url "https://maven.eveoh.nl/content/repositories/releases" }
+  }
+
+  dependencies { classpath "nl.eveoh:gradle-aspectj:1.5" }
 }
 
-subprojects {
-  ext.aspectjVersion = '1.8.5'
-  ext.springVersion = '4.1.6.RELEASE'
+apply plugin: 'aspectj'
 
-  buildscript {
-    repositories {
-      maven { url "https://maven.eveoh.nl/content/repositories/releases" }
-    }
+repositories {
+  mavenCentral()
+}
 
-    dependencies { classpath "nl.eveoh:gradle-aspectj:1.5" }
-  }
-
-  repositories {
-    mavenCentral()
-  }
-
-  dependencies {
-    compile "org.aspectj:aspectjrt:$aspectjVersion"
-    compile "org.springframework:spring-context:$springVersion"
-    compile "org.springframework:spring-aspects:$springVersion"
-    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
-    testCompile "org.spockframework:spock-spring:1.0-groovy-2.4"
-    testCompile "org.springframework:spring-test:$springVersion"
-  }
+dependencies {
+  compile "org.aspectj:aspectjrt:$aspectjVersion"
+  compile "org.springframework:spring-context:$springVersion"
+  compile "org.springframework:spring-aspects:$springVersion"
+  testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+  testCompile "org.spockframework:spock-spring:1.0-groovy-2.4"
+  testCompile "org.springframework:spring-test:$springVersion"
 }
