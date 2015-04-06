@@ -1,1 +1,4 @@
+// Cfr. http://gradle.org/docs/current/userguide/plugins.html#sec:plugins_block 21.5.1.3:
+// "There is currently no mechanism for applying a plugin to multiple projects at once"
+// (however apparently the built-in plugins don't have this limitation, don't know why)
 apply plugin: 'aspectj'
