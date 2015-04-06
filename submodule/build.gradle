@@ -1,9 +1,1 @@
 apply plugin: 'aspectj'
-
-compileAspect {
-  additionalAjcArgs = ['verbose': 'true', 'showWeaveInfo': 'true']
-}
-
-dependencies {
-  aspectpath "org.springframework:spring-aspects:4.1.6.RELEASE"
-}
