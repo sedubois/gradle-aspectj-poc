@@ -1,4 +1,4 @@
-package com.hello;
+package com.hello.aop;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Component;
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan
-class AppConfig {
+class AopConfig {
 
   @Aspect
   @Component
   static class UnsupportedOperationAspect {
 
-    @Before("execution(* com.hello.GreetingService.unsupportedMethod(..))")
-    public void throwUnsupportedOperationOnGreetingServiceUnsupportedMethod() {
+    @Before("execution(* com.hello.aop.MyService*.serviceMethod(..))")
+    public void throwUnsupportedOperationOnMethod1() {
       throw new UnsupportedOperationException();
     }
   }
