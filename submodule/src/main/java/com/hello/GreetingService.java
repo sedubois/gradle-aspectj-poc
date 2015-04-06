@@ -9,7 +9,7 @@ class GreetingService {
     // nothing to do
   }
 
-  Greeting methodUsingAutoValue() {
+  Greeting supportedMethod() {
     return new Greeting("yo!");
   }
 }

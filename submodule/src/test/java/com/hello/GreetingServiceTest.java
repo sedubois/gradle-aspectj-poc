@@ -22,7 +22,7 @@ public class GreetingServiceTest {
 
   @Test
   public void method2_retrievesExpectedGreetingValue() {
-    Greeting greeting = greetingService.methodUsingAutoValue();
+    Greeting greeting = greetingService.supportedMethod();
 
     then(greeting).isEqualTo(new Greeting("yo!"));
   }
