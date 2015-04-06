@@ -3,13 +3,13 @@ package com.hello;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingService {
+class GreetingService {
 
-  public void unsupportedMethod() {
+  void unsupportedMethod() {
     // nothing to do
   }
 
-  public Greeting methodUsingAutoValue() {
+  Greeting methodUsingAutoValue() {
     return new Greeting("yo!");
   }
 }

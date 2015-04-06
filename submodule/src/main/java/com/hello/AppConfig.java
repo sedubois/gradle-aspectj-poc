@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan
-public class AppConfig {
+class AppConfig {
 
   @Aspect
   @Component
-  public static class UnsupportedOperationAspect {
+  static class UnsupportedOperationAspect {
 
     @Before("execution(* com.hello.GreetingService.unsupportedMethod(..))")
     public void throwUnsupportedOperationOnGreetingServiceUnsupportedMethod() {
