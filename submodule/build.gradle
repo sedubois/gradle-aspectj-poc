@@ -1,13 +1,9 @@
-buildscript {
-  repositories {
-    maven {
-      url "https://maven.eveoh.nl/content/repositories/releases"
-    }
-  }
+apply plugin: 'aspectj'
 
-  dependencies {
-    classpath "nl.eveoh:gradle-aspectj:1.5"
-  }
+compileAspect {
+  additionalAjcArgs = ['verbose': 'true', 'showWeaveInfo': 'true']
 }
 
-apply from: '../other.gradle'
+dependencies {
+  aspectpath "org.springframework:spring-aspects:4.1.6.RELEASE"
+}
