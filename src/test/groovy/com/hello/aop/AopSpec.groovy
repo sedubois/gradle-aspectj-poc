@@ -9,10 +9,20 @@ class AopSpec extends Specification {
 
   @Autowired
   private MyService myService
+  @Autowired
+  private MyServiceB myServiceB
 
   def myService_serviceMethod_throwsUnsupportedOperation() {
     when:
     myService.serviceMethod()
+
+    then:
+    thrown(UnsupportedOperationException)
+  }
+
+  def myServiceB_serviceMethod_throwsUnsupportedOperation() {
+    when:
+    myServiceB.serviceMethod()
 
     then:
     thrown(UnsupportedOperationException)

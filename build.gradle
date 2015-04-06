@@ -13,6 +13,7 @@ buildscript {
   dependencies { classpath "nl.eveoh:gradle-aspectj:1.5" }
 }
 
+// WARNING: apparently does not weave into test classes by default
 apply plugin: 'aspectj'
 
 repositories {
