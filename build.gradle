@@ -21,7 +21,6 @@ repositories {
 }
 
 dependencies {
-  compile "org.aspectj:aspectjrt:$aspectjVersion"
   compile "org.springframework:spring-context:$springVersion"
   testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
   testCompile "org.spockframework:spock-spring:1.0-groovy-2.4"
