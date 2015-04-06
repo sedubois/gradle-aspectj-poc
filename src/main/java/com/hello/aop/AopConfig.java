@@ -16,7 +16,7 @@ class AopConfig {
   @Component
   static class UnsupportedOperationAspect {
 
-    @Before("execution(* com.hello.aop.MyService*.serviceMethod(..))")
+    @Before("execution(* com.hello.aop.MainService.serviceMethod(..))")
     public void throwUnsupportedOperationOnMethod1() {
       throw new UnsupportedOperationException();
     }

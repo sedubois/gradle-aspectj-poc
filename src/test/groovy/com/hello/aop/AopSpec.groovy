@@ -8,21 +8,21 @@ import spock.lang.Specification
 class AopSpec extends Specification {
 
   @Autowired
-  private MyService myService
+  private MainService mainService
   @Autowired
-  private MyServiceB myServiceB
+  private TestService testService
 
-  def myService_serviceMethod_throwsUnsupportedOperation() {
+  def mainService_throwsUnsupportedOperation() {
     when:
-    myService.serviceMethod()
+    mainService.serviceMethod()
 
     then:
     thrown(UnsupportedOperationException)
   }
 
-  def myServiceB_serviceMethod_throwsUnsupportedOperation() {
+  def testService_throwsUnsupportedOperation() {
     when:
-    myServiceB.serviceMethod()
+    testService.serviceMethod()
 
     then:
     thrown(UnsupportedOperationException)
