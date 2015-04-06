@@ -1,8 +1,3 @@
-TestAspectJ4Gradle
-==================
+This is a proof of concept of using the Gradle AspectJ plugin (from eveoh, used until one is available on plugins.gradle.org).
 
-Test AspectJ On Gradle Setting
-
-Blog : http://www.rover12421.com/2013/12/25/gradle-configure-aspectj.html
-
-gradle-aspectj : https://github.com/eveoh/gradle-aspectj
+By default, it seems the plugin does not weave aspects into test classes.
