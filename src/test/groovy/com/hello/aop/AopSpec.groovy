@@ -12,7 +12,7 @@ class AopSpec extends Specification {
   @Autowired
   private TestService testService
 
-  def mainService_throwsUnsupportedOperation() {
+  def "mainService throws UnsupportedOperation"() {
     when:
     mainService.serviceMethod()
 
@@ -20,7 +20,7 @@ class AopSpec extends Specification {
     thrown(UnsupportedOperationException)
   }
 
-  def testService_throwsUnsupportedOperation() {
+  def "testService throws UnsupportedOperation"() {
     when:
     testService.serviceMethod()
 
